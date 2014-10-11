@@ -1,0 +1,31 @@
+html, body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	min-height:1024px; 
+	min-width:640px;
+	color: #777
+}
+
+body {
+	background-image: url(../img/home.jpg);
+	background-size: 100%;
+}
+
+#login {
+	margin-top: 12%;
+	display: block;
+	box-shadow: 3px 3px 21px rgba(100,100,100,0.1);
+	padding: 40px;
+	background-image: url(../img/login.png);
+}
+#login input {
+	margin: 7px;
+}
+#login .btn {
+	margin-top: 10px;
+	margin-left: 6px;
+	margin-right: 6px; 
+	float: right;
+}

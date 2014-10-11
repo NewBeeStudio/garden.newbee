@@ -1,0 +1,60 @@
+html, body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	min-height:1024px; 
+	min-width:640px;
+	color: #777
+}
+hr {
+	width: 50%;
+}
+
+#promote .col-md-6 img{
+	margin-top: 20px;
+	width: 90%;
+}
+#promote h1 {
+	font-family: Microsoft Yahei;
+	letter-spacing: 3px;
+	font-size: 300%;
+	margin-top: 80px;
+	margin-bottom: 15px;
+	color: #555;
+}
+#promote h3 {
+	font-family: Kaiti;
+	font-size: 180%;
+	color: #666;
+}
+#promote_sub {
+	font-family: sans-serif;
+	margin-top: 40px;
+	position: relative;
+	left: -10px;
+}
+#promote .col-md-4 img {
+	padding-right: 10px;
+	width: 60px;
+}
+#promote span {
+	font-size: 120%;
+	color: #6e6e6e;
+}
+
+.part {
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+.part h3 {
+	margin: 20px;
+	color: #666;
+}
+
+.footer {
+	border: 1px solid #e7e7e7;
+	background-color: #f8f8f8;
+	padding-top: 15px;
+	padding-bottom: 10px;
+}

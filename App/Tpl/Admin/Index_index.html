@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8' />
+	<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>thinkPHP test admin</title>
+    <meta name='description' content='' />
+    <meta name='keywords' content='' />
+    <meta name='author' content='hlzhang' />
+    <link rel='shortcut icon' href=''>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/Admin_Index_index.css">
+</head>
+<body>
+	<div id='header'>this is the header</div>
+	
+	<div id='content'>
+		<foreach name='users' item='v'>
+			<p>用户id：{$v.int}</p>
+			<p>用户名：{$v.username}</p>
+			<p>用户密码：{$v.pwd}</p>
+		</foreach>
+	</div>
+
+	<div id='footer'>this is the footer</div>
+</body>
+</html>

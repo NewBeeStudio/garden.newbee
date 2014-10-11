@@ -1,0 +1,34 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8' />
+	<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>新蜂后花园 ｜ Buzz~</title>
+    <meta name='description' content='' />
+    <meta name='keywords' content='' />
+    <meta name='author' content='hlzhang' />
+    <link rel='shortcut icon' href=''>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/Index_Login_index.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.min.css">
+    <script src='__PUBLIC__/js/bootstrap.min.js'></script>
+    <script src='__PUBLIC__/js/jquery.min.js'></script>
+    <script src='__PUBLIC__/js/Index_Login_index.js'></script>
+</head>
+<body>
+	<div class="col-md-4"></div>
+	<div class="col-md-4" id="login">
+		<form class='form-inline' role='form' name='login' method='post' action="<?php echo U('Index/Login/handle_login');?>">
+			<div class="form-group">
+				<label for='username'>账号：</label>
+				<input type='text' name='username' id='username' class='form-control' placeholder='你的姓名'><br>
+				<label for='pwd'>密码：</label>
+				<input type='password' name='pwd' id='pwd' class='form-control' placeholder='***********'><br>
+				<a href="<?php echo U('Index/Register/index');?>" class='btn btn-default'>注册</a>
+				<input type='submit' class="btn btn-default disabled" value='登录'>
+			</div>
+		</form>	
+	</div>
+	<div class="col-md-4"></div>
+</body>
+</html>
