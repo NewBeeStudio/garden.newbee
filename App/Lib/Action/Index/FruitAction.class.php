@@ -1,7 +1,8 @@
 <?php
-	class FruitAction extends CommonAction {
-		public function index(){
-			echo 'fruit';
-		}
-	} 
+class FruitAction extends CommonAction {
+	public function index(){
+		layout('layout');
+		$this->display();
+	}
+} 
 ?>

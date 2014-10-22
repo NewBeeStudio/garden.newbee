@@ -1,6 +1,7 @@
 <?php
 class IndexAction extends Action {
 	public function index(){
+		layout('layout');
 		$this->display();
 	}
 

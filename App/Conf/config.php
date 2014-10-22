@@ -3,7 +3,7 @@ return array(
 	'DB_TYPE' => 'mysql',
 	'DB_HOST' => 'localhost',
 	'DB_USER' => 'root',
-	'DB_PWD' => 'mxhx931211',
+	'DB_PWD' => '',
 	'DB_NAME' => 'garden',
 	'DB_PREFIX' => 'think_',
 
