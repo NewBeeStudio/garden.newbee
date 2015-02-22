@@ -11,7 +11,7 @@ return array(
 	'DEFAULT_GROUP' => 'Index',
 
 	'TMPL_VAR_IDENTIFY' => 'array',
-	'TMPL_FILE_DEPR' => '_',
+	'TMPL_FILE_DEPR' => '_',    // Tpl/Controller_Function.html
 	//'TMPL_EXCEPTION_FILE' => './Public/Tpl/error.html',
 	'URL_HTML_SUFFIX' => '',
 	'URL_MODEL' => 1,

@@ -1,1 +1,83 @@
-<p>chat</p>
+<head>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/Index_Chat_index.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/hexagon_image.css">
+	<script src="__PUBLIC__/js/Index_Chat_index.js"></script>
+</head>
+
+<div class="chat_contents">
+	<foreach name="chats" item="chat" key="key1">
+		<div class="item">
+			<php>$replys = $chat['reply'];</php>
+			<div class="user_info">
+				<div class="user_img hexagon hexagon1">
+					<?php
+						$user_img = "__PUBLIC__/Uploads/user_img/".$chat['username'].".jpg";
+					?>
+					<div class="hexagon-in1">
+						<div class="hexagon-in2" style="background-image: url('{$user_img}');">
+						</div>
+					</div>
+				</div>
+				<p>{$chat.username}</p>
+			</div>
+			<div class="content">
+				<div class="description">
+					<p>{$chat.content}</p>
+					<a class="reply_click" href="javascript:void(0);" onclick="reply_info
+					({$key1})">reply</a>	
+				</div>
+				<foreach name="replys" item="reply" key="key2">
+					<?php
+						$replys2 = $reply_list->relation(true)->where('id='.$reply['id'])->find()['reply'];
+					?>
+					<div class="chat_reply">
+						{$reply.from_user} to:{$reply.to_user}-----{$reply.content}
+						<a class="reply_click" href="javascript:void(0);" onclick="reply2_info({$key1},{$reply.id})">reply2</a>
+					</div>
+					<foreach name="replys2" item="reply2" key="key3">
+						<div class="chat_reply2">
+							{$reply2.from_user} to:{$reply2.to_user}-----{$reply2.content}
+							<a class="reply_click" href="javascript:void(0);" onclick="reply2_info({$key1},{$reply.id})">reply2</a>	
+						</div>
+					</foreach>
+					<hr>
+				</foreach>
+				<div class="reply" id="reply_{$key1}">
+					<p>reply1</p>
+					<form class="reply_form" method="POST" action="__URL__/handle_chat_reply/">
+						<input type="text" name="to_user" value="{$chat.username}">
+						<input type="text" name="chat_id" value="{$chat.id}">
+						<input type="text" name="reply_content" placeholder=''>
+						<input type="submit">
+					</form>
+				</div>
+				<div class="reply2" id="reply2_{$key1}">
+					<p>reply2</p>
+					<form class="reply2_form" method="POST" action="__URL__/handle_chat_reply2/">
+						<input type="text" name="reply_id" value="">
+						<input type="text" name="to_user" value="">
+						<input type="text" name="reply_content" placeholder=''>
+						<input type="submit">
+					</form>
+				</div>
+			</div>		
+		</div>
+	</foreach>
+	<nav class="page_div">
+		<ul class="pagination">
+			<li></li>
+			{$page}
+		</ul>
+	</nav>
+</div>
+
+<div class="chat_submit">
+	<form method='POST' action="__URL__/handle_chat/">
+		<label for="chat_title">主题:</label>
+		<input name="chat_title"></input><br>
+		<label for='chat_content'>内容:</label>
+		<textarea name="chat_content" placeholder="说点什么吧..."></textarea>
+		<br>
+		<input type="submit" value="提交" >
+	</form>
+</div>

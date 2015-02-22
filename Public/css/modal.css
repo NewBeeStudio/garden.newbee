@@ -1,0 +1,57 @@
+
+.item{
+	margin: 20px 0;
+}
+
+.item_title {
+	background-color: rgba(233,233,233,0.7);
+	font-size: 150%;
+}
+
+.item_title {
+	text-align: center;
+	font-size: 180%;
+}
+
+.item_content {
+	background-color: rgba(233,233,233,0.7);
+	font-size: 125%;
+}
+
+.item_title a{
+	text-decoration: none;
+	font-size: 26px;
+}
+
+.item_content p, pre{
+	text-align: left;
+	font-size: 90%;
+}
+
+
+.item_info{
+	text-align: right;
+	color: gray;
+}
+
+.modal-title{
+	text-align: center;
+}
+
+.modal-content pre {
+	border: 0;
+	background-color: white;
+}
+
+.modal-body pre{
+	font-size: 125%;
+}
+
+.modal-footer pre{
+	text-align: right;
+}
+
+.modal-footer {
+	padding:0;
+	padding-right:15px;
+}

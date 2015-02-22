@@ -1,0 +1,45 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	margin:0;
+}
+
+body{
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/home.jpg');
+	background-size: 100%;
+}
+
+#image_section, #info_section{
+	margin-top: 8%;
+	display: block;
+	box-shadow: 3px 3px 21px rgba(100,100,100,0.1);
+	padding: 40px;
+	background-color: rgba(255,255,255,0.5);
+}
+
+#info_section{
+	margin-left: 80px;
+}
+
+#image_section{
+	margin-left: -50px;
+}
+
+#preview{
+	max-width: 380px;
+}
+
+.form-group{
+	margin-left: 10%;
+}
+
+#info_section input{
+	margin: 7px;
+	vertical-align: middle;
+}
+
+#info_section input[disabled='true']{
+	cursor: default;
+}

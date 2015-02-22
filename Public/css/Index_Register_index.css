@@ -3,8 +3,8 @@ html, body {
 	margin: 0;
 	padding: 0;
 	text-align: center;
-	min-height:1024px; 
-	min-width:640px;
+	height: 100%; 
+	width: 100%;
 	color: #777
 }
 
@@ -24,9 +24,11 @@ label {
 	padding: 40px;
 	background-image: url(../img/login.png);
 }
+
 #register input {
 	margin: 7px;
 }
+
 #register .btn {
 	color: #666;
 	margin-top: 10px;
@@ -34,12 +36,14 @@ label {
 	margin-right: 6px; 
 	float: right;
 }
+
 #register span, #register img {
 	position: relative;
 	top: 15px;
 	left: 20px;
 	margin-left: 5px;
 }
+
 #register span {
 	cursor: pointer;
 	color: #777;

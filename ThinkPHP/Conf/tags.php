@@ -19,6 +19,7 @@ return array(
     'route_check'   =>  array(
         'CheckRoute', // 路由检测
     ), 
+    'app_begin'     =>  array('Getcoding'),
     'app_end'       =>  array(),
     'path_info'     =>  array(),
     'action_begin'  =>  array(),

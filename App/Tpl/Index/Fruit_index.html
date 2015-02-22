@@ -1,1 +1,54 @@
-<p>fruit</p>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/Index_Fruit_index.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/hexagon_image.css">
+	<script src="__PUBLIC__/js/Index_Fruit_index.js"></script>
+</head>
+
+<div class="fruit_contents">
+	<foreach name="fruits" item="fruit" key="key1">
+		<div class="item">
+			<php>$files = $fruit["file"]</php>
+			<div class="user_info">
+				<div class="user_img hexagon hexagon1">
+					<?php
+						$user_img = "__PUBLIC__/Uploads/user_img/".$fruit['username'].".jpg";
+					?>
+					<div class="hexagon-in1">
+						<div class="hexagon-in2" style="background-image: url('{$user_img}');">
+						</div>
+					</div>
+				</div>
+				<p>{$fruit.username}</p>
+			</div>
+			<div class="content">
+				<div class="description">
+					<p>{$fruit.content}</p>
+				</div>
+				<foreach name="files" item="file" key="key2">
+					<a href="__PUBLIC__/Uploads/file/{$file.id}/{$file.storename}">{$file.filename}</a>
+					<br>
+				</foreach>
+			</div>		
+		</div>
+	</foreach>
+	<nav class="page_div">
+		<ul class="pagination">
+			<li></li>
+			{$page}
+		</ul>
+	</nav>
+</div>
+
+<div class="file_upload">
+	<form id="upload" method='POST' action="__URL__/handle_fruit/" enctype="multipart/form-data">
+		<label for="file_description">文件说明:</label>
+		<textarea name="file_description" placeholder="说点什么吧..."></textarea><br>
+		<label for='file'>文件上传:</label>
+		<input type="button" name="browse" value="浏览..">
+		<input name="file[]" type="file" multiple="multiple" onchange="selectfiles(this)">
+		<br>
+		<div id="file_info"></div>
+		<input type="submit" value="提交" >
+	</form>
+</div>

@@ -7,16 +7,16 @@
 		
 		public function handle_login(){
 			if(IS_POST){
-				$user = M('user')->where(array('username'=>I('username')))->select();
+				$user = M('user')->where(array('username'=>I('username')))->find();
 				if(!$user){
 					$this->error('不存在该用户！');
 				}
-				else if($user[0]['password']!=I('pwd')){
-					$this->error('密码错误！');
+				else if($user['password'] != I('pwd')){
+						$this->error('密码错误！');
 				}
 				else{
-					session('uid',$user[0]['id']);
-					session('username',$user[0]['username']);
+					session('uid',$user['id']);
+					session('username',$user['username']);
 					M('user')->where(array('username'=>I('username')))->save(array(
 						'logintime'=>time(),
 						'loginip'=>get_client_ip()

@@ -5,8 +5,9 @@ html, body {
 	text-align: center;
 	min-height:1024px; 
 	min-width:640px;
-	color: #777
+	color: #777;
 }
+
 hr {
 	width: 50%;
 }
@@ -29,7 +30,6 @@ hr {
 	color: #666;
 }
 #promote_sub {
-	font-family: sans-serif;
 	margin-top: 40px;
 	position: relative;
 	left: -10px;
@@ -43,6 +43,20 @@ hr {
 	color: #6e6e6e;
 }
 
+.news img{
+	display: inline-block;
+	margin-left: 60%;
+	margin-top: -60px;
+}
+
+.news img{
+	width: 50px;
+}
+
+.news pre{
+	text-align: left;
+}
+
 .part {
 	margin-top: 60px;
 	margin-bottom: 60px;
@@ -50,11 +64,4 @@ hr {
 .part h3 {
 	margin: 20px;
 	color: #666;
-}
-
-.footer {
-	border: 1px solid #e7e7e7;
-	background-color: #f8f8f8;
-	padding-top: 15px;
-	padding-bottom: 10px;
 }

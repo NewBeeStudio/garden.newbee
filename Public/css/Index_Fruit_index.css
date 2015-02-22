@@ -1,0 +1,68 @@
+.item{
+	margin-top: 50px;
+}
+
+.user_img{
+	display: inline-block;
+	width: 180px;
+	height: 180px;
+	border: 1px solid #e7e7e7;
+	margin: 10px 0;
+}
+
+.user_info{
+	display: inline-block;
+	width: 20%;
+	margin-left: 10%;
+	vertical-align: top;
+	background-color: #f5f5f5;
+	text-align: center;
+}
+
+.content{
+	display: inline-block;
+	width: 55%;
+	font-size: 17px;
+}
+
+.description{
+	padding-top: 20px;
+	padding-left: 5%;
+	min-height: 235px;
+	border-left: 1px solid gray;
+	background-color: #f6f6f6;
+}
+
+.file_upload{
+	width: 80%;
+	margin: 0 auto;
+	text-align: left;
+}
+
+#upload{
+	margin-left: 10%;
+}
+
+textarea[name='file_description']{
+	width: 80%;
+	height: 200px;
+	font-size: 17px;
+	vertical-align: top;
+}
+
+input[type="button"]{
+	background-color: #fff;
+	border: 1px solid gray;
+	height: 26px;
+	width: 70px;
+	margin: 0;
+	padding: 0;
+}
+
+input[type="file"]{
+	display: inline-block;
+	opacity: 0;
+	margin-left: -74px;
+	width: 70px;
+	margin-top: 2px;
+}

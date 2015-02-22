@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf8' />
+	<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>新蜂后花园 ｜ Buzz~</title>
+    <meta name='description' content='' />
+    <meta name='keywords' content='' />
+    <meta name='author' content='hlzhang' />
+    <link rel='shortcut icon' href=''>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/Index_Profile_index.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/jquery.Jcrop.min.css">
+    <script src="__PUBLIC__/js/jquery.min.js"></script>
+    <script src="__PUBLIC__/js/jquery.Jcrop.min.js"></script>
+    <script src='__PUBLIC__/js/bootstrap.min.js'></script>
+    <script src="__PUBLIC__/js/Index_Profile_index.js"></script>
+</head>
+<body>
+	<div class="row">
+		<div class="col-sm-2 col-md-2 col-lg-2"></div>
+		<div class="col-sm-4 col-md-4 col-lg-4" id="image_section">
+			<div id="ori_image">
+				<img src="">
+			</div>
+			<form id="image_form" enctype="multipart/form-data" method="post" action="__URL__/image_upload/">
+                <!-- hidden crop params -->
+                <input type="hidden" id="x" name="x" />
+                <input type="hidden" id="y" name="y" />
+                <input type="hidden" id="x2" name="x2" />
+                <input type="hidden" id="y2" name="y2" />
+                <input type="hidden" id="w" name="w" />
+                <input type="hidden" id="h" name="h" />
+                <input type="hidden" id="ratio" name="ratio"/>
+
+                <div>
+                    <input type="file" name="image_file" id="image_file" onChange="fileSelectHandler()" />
+                </div>
+
+                <div class="error"></div>
+
+                <div id="jcrop_div"></div>
+
+                <input type="submit" value="Upload" />
+            </form>
+		</div>
+		<div class="col-sm-4 col-md-4 col-lg-4" id="info_section">
+            <div>
+		    <form class='form-inline' role='form' name='register' method='' action=''>
+    			 <div class="form-group">
+    				<label for='username'>&nbsp;&nbsp;&nbsp;&nbsp;账号：</label>
+    				<input type='text' name='username' id='username' class='form-control' placeholder='{$username}' disabled='true'><br>
+    				<label for='pwd1'>&nbsp;&nbsp;&nbsp;&nbsp;密码：</label>
+    				<input type='password' name='pwd1' id='pwd1' class='form-control' placeholder='***********' disabled="true">
+                        <a data-toggle="modal" data-target="#modify_div">EDIT</a>
+    			</div>
+		    </form>	
+            </div>
+            <div class="modal fade" id="modify_div" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">密码修改</h4>
+                        </div>
+                        <div class="modal-body">
+                             <form id="modify" method="post" action="__URL__/handle_modify/">
+                                <label for="ori_pwd">请输入原密码：</label>
+                                <input type="password" name="ori_pwd"><br>
+                                <label for="new_pwd">请输入新密码：</label>
+                                <input type="password" name="new_pwd"><br>
+                                <label for="new_pwd2">请再输入一次：</label>
+                                <input type="password" name="new_pwd2">
+                             </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" onclick="document.getElementById('modify').submit()">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+       
+		<div class="col-sm-2 col-md-2 col-lg-2"></div>
+	</div>
+</body>
+</html>

@@ -1,1 +1,75 @@
-<p>command</p>
+<head>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/modal.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/Index_Command_index.css">
+    <script src='__PUBLIC__/js/Index_Command_index.js'></script>
+    
+</head>
+<div class="interface">
+
+</div>
+<div class="show row">
+	<!-- <hr> -->
+	<div class="col-md-2 col-sm-2 col-xs-2"></div>
+	<div class="col-md-8 col-sm-8 col-xs-8">
+		<foreach name="commands" item='v' key="key">
+			<div class="command_item item">
+				<div class="command_title item_title">
+					<a class="show_detail" data-toggle="modal" data-target="#{$key}">{$v.title}</a>
+				</div>
+				<div class="command_content item_content">
+					<pre>{$v.content|msubstr=0, 300, 'utf-8', false}<br><a class="show_detail" data-toggle="modal" data-target="#{$key}"><span>查看全文</span></a>
+					</pre>
+				</div>
+				<p class="command_info item_info">
+					用户名：{$v.username} 发表时间：{$v.time|date="Y-m-d H:i:s", ###}
+				</p>
+			</div>
+
+			<div class="bs-example-modal-lg modal fade item_modal" id="{$key}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			  	<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<php>$item = $commands[$key]</php>
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">
+								<span aria-hidden="true">&times;</span>
+								<span class="sr-only">Close</span>
+							</button>
+							<h2 class="modal-title" id="myLargeModalLabel">{$item.title}</h2>
+						</div>
+						<div class="modal-body">
+							<pre>{$item.content}</pre>
+				    	</div>
+				    	<div class="modal-footer">
+							<pre>用户名：{$item.username} 发表时间：{$item.time|date="Y-m-d H:i:s", ###}</pre>
+				    	</div>
+				    </div>
+			  	</div>
+			</div>
+		</foreach>
+		<nav class="page_div">
+		  <ul class="pagination">
+		  	<li></li>
+		  	{$page}
+		  </ul>
+		</nav>
+	</div>
+	<div class="col-md-2 col-sm-2 col-xs-2">
+	</div>
+</div>
+
+<div class="submit">
+	<div class="row">
+		<div class="col-md-2 col-sm-2 col-xs-2"></div>
+		<div class="col-md-8 col-sm-8 col-xs-8">
+			<form method='post' action="{:U('Index/Command/handle_command')}">
+				<label for="title">主题:</label>
+				<input type='text' name="title" id="title"><br>
+				<label for="content">内容:</label>
+				<textarea name="content" id="content" placeholder="说点什么吧..."></textarea><br>
+				<input type="submit" value="提交">
+			</form>
+		</div>
+		<div class="col-md-2 col-sm-2 col-xs-2"></div>
+	</div>		
+</div>
+

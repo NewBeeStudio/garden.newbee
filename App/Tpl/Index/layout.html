@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset='UTF-8' />
+	<meta charset='utf8' />
 	<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>新蜂后花园 ｜ Buzz~</title>
@@ -10,10 +10,9 @@
     <meta name='author' content='hlzhang' />
     <link rel='shortcut icon' href=''>
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/Index_Index_index.css">
-    <script src='__PUBLIC__/js/bootstrap.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/layout.css">
     <script src='__PUBLIC__/js/jquery.min.js'></script>
-    <script src='__PUBLIC__/js/Index_Index_index.js'></script>
+    <script src='__PUBLIC__/js/bootstrap.min.js'></script>
 </head>
 <body>
 	<div id='header'>
@@ -43,7 +42,8 @@
 								echo "<li><a id='login' href='__ROOT__/index.php/Index/Login/index' class='nav_main'>Log in</a></li><li><a id='register' href='__ROOT__/index.php/Index/Register/index' class='nav_main'>Register</a></li>";
 							}
 							else{
-								echo "<li><a id='myself' href='' class='nav_main'>".session('username')."</a></li><li><a id='logout' href='__ROOT__/index.php/Index/Index/logout' class='nav_main'>Log out</a></li>";
+								$header_img = "__PUBLIC__/Uploads/user_img/".$_SESSION['username'].".jpg";
+								echo "<li><img id='header_img' src=$header_img></li><li><a id='myself' href='__ROOT__/index.php/Index/Profile/index' class='nav_main'>".session('username')."</a></li><li><a id='logout' href='__ROOT__/index.php/Index/Index/logout' class='nav_main'>Log out</a></li>";
 							}
 						?>
 					</ul>

@@ -1,3 +1,9 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/Index_Index_index.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/modal.css">
+    <script src='__PUBLIC__/js/Index_Index_index.js'></script>
+</head>
+
 <div id="promote">
 	<div class="row">
 		<div class="col-md-1 col-sm-1 col-xs-1"></div>
@@ -18,13 +24,45 @@
 <div class='news part'>
 	<hr>
 	<h3>兵长有令</h3>
-	<p>这里发布最新的通知</p>
-	<p>这里发布最新的通知</p>
-	<p>这里发布最新的通知</p>
-	<p>这里发布最新的通知</p>
-	<p>这里发布最新的通知</p>
-	<p>这里发布最新的通知</p>
-	<p>这里发布最新的通知</p>
+	<a href="__ROOT__/index.php/Index/Command/index"><img src="__PUBLIC__/img/bee.jpg"></a>
+	<div class="row">
+		<div class="col-md-2 col-sm-2 col-xs-2"></div>
+		<div class="col-md-8 col-sm-8 col-xs-8">
+			<div class="command_item item">
+				<div class="command_title item_title">
+					<a class="show_detail" data-toggle="modal" data-target="#command_modal">{$command.title}</a>
+				</div>
+				<div class="command_content item_content">
+					<pre>{$command.content|msubstr=0, 300, 'utf-8', false}<br><a class="show_detail" data-toggle="modal" data-target="#command_modal"><span>查看全文</span></a>
+					</pre>
+				</div>
+				<p class="command_info item_info">
+					用户名：{$command.username} 发表时间：{$command.time|date="Y-m-d H:i:s", ###}
+				</p>
+			</div>
+			<div class="bs-example-modal-lg modal fade item_modal" id="command_modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+				  	<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">
+									<span aria-hidden="true">&times;</span>
+									<span class="sr-only">Close</span>
+								</button>
+								<h2 class="modal-title" id="myLargeModalLabel">{$command.title}</h2>
+							</div>
+							<div class="modal-body">
+								<pre>{$command.content}</pre>
+					    	</div>
+					    	<div class="modal-footer">
+								<pre>用户名：{$command.username} 发表时间：{$command.time|date="Y-m-d H:i:s", ###}</pre>
+					    	</div>
+					    </div>
+				  	</div>
+				</div>
+		</div>
+	<div class="col-md-2 col-sm-2 col-xs-2"></div>
+	</div>
+
 </div>
 
 <div class='fruit part'>

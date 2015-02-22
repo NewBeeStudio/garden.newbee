@@ -3,7 +3,6 @@ html, body {
 	margin: 0;
 	padding: 0;
 	text-align: center;
-	min-height:1024px; 
 	min-width:640px;
 	color: #777
 }
@@ -18,7 +17,7 @@ body {
 	display: block;
 	box-shadow: 3px 3px 21px rgba(100,100,100,0.1);
 	padding: 40px;
-	background-image: url(../img/login.png);
+	background-image: url('../img/login.png');
 }
 #login input {
 	margin: 7px;

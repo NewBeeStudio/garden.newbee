@@ -1,0 +1,27 @@
+.interface{
+	height: 350px;
+	margin: 0 10% 50px;
+}
+
+#title{
+	font-size: 150%;
+}
+
+.submit textarea{
+	width: 90%;
+	height: 200px;
+	font-size: 17px;
+	display: inline-block;
+	vertical-align: top;
+}
+.submit{
+	text-align: left;
+}
+
+.submit input[type='submit']{
+	text-align: center;
+	margin-left: 47%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
