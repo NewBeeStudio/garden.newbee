@@ -1,11 +1,16 @@
 
 .item{
-	margin: 20px 0;
+	margin: 50px 0;
+	overflow: hidden;
 }
 
 .item_title {
-	background-color: rgba(233,233,233,0.7);
 	font-size: 150%;
+	margin-bottom: 10px;
+}
+
+pre{
+	background-color: transparent;
 }
 
 .item_title {
@@ -14,7 +19,7 @@
 }
 
 .item_content {
-	background-color: rgba(233,233,233,0.7);
+	background-color: rgba(159,171,223,0.3);
 	font-size: 125%;
 }
 

@@ -1,3 +1,22 @@
+.interface{
+	height: 662px;
+	margin-top: -72px;
+	background-image: url('../img/chat.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+#intro{
+	position: absolute;
+	left: 100px;
+	top: 224px;
+	width: 400px;
+	height: 200px;
+	background-color: rgba(255,255,255,0.3);
+	box-shadow: 3px 3px 10px #888;
+
+}
+
 .item{
 	margin-top: 50px;
 }

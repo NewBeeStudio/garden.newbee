@@ -2,6 +2,35 @@
 	margin-top: 50px;
 }
 
+.interface{
+	height: 722px;
+	margin-top: -88px;
+	background-image: url('../img/fruit.jpg');
+	background-size: 100%;
+	
+	background-repeat: no-repeat;
+}
+
+#intro{
+	position: absolute;
+	left: 100px;
+	top: 224px;
+	width: 400px;
+	height: 200px;
+	background-color: rgba(255,255,255,0.3);
+	box-shadow: 3px 3px 10px #888;
+}
+
+#logo{
+	position: absolute;
+	width: 164px;
+	right: 210px;
+	top: 235px;
+	font-size: 75px;
+	line-height: 97%;
+	border: white 1px solid;
+}
+
 .user_img{
 	display: inline-block;
 	width: 180px;

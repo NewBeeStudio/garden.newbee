@@ -1,6 +1,38 @@
+body{
+	background-color: rgb(250, 249, 251);
+}
+
 .interface{
-	height: 350px;
-	margin: 0 10% 50px;
+	height: 662px;
+	margin-top: -72px;
+	background-image: url('../img/command3.jpg');
+	background-size: 100%;
+	
+	background-repeat: no-repeat;
+}
+
+#intro{
+	position: absolute;
+	left: 100px;
+	top: 224px;
+	width: 400px;
+	height: 200px;
+	background-color: rgba(255,255,255,0.3);
+	box-shadow: 3px 3px 10px #888;
+}
+
+#logo{
+	position: absolute;
+	width: 164px;
+	right: 210px;
+	top: 235px;
+	font-size: 75px;
+	line-height: 97%;
+	border: white 1px solid;
+}
+
+.command_intro p{
+	margin: 6px;
 }
 
 #title{

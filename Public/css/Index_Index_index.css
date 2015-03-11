@@ -12,6 +12,25 @@ hr {
 	width: 50%;
 }
 
+.interface{
+	height: 725px;
+	margin-top: -66px;
+	background-image: url('../img/home2.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+#intro{
+	position: absolute;
+	left: 100px;
+	top: 224px;
+	width: 400px;
+	height: 200px;
+	background-color: rgba(255,255,255,0.3);
+	box-shadow: 3px 3px 10px #888;
+
+}
+
 #promote .col-md-6 img{
 	margin-top: 20px;
 	width: 90%;

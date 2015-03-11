@@ -4,6 +4,14 @@ html, body{
 }
 
 
+.navbar-default{
+	background-color: rgba(255,255,255,0.5);
+}
+
+.row{
+	margin: 0;
+}
+
 #header_img{
 	width: 50px;
 }
